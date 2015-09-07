@@ -6,8 +6,8 @@
   "subdomain": "revealjs",
   "main": "js/reveal.js",
   "scripts": {
-    "test": "grunt test",
-    "start": "grunt serve"
+    "test": "node -e \"require('grunt').tasks(['test']);\"",
+    "start": "node -e \"require('grunt').tasks(['serve']);\""
   },
   "author": {
     "name": "Hakim El Hattab",
