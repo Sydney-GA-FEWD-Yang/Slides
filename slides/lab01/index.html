@@ -74,6 +74,37 @@
         </section>
 
         <section>
+            <h2>A drop of history</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1991</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>1994</td>
+                    <td>HTML 2</td>
+                </tr>
+                <tr>
+                    <td>1996</td>
+                    <td>CSS 1/Javascript</td>
+                </tr>
+                <tr>
+                    <td>1997</td>
+                    <td>HTML 4</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section>
             <section data-markdown>
                 <script type="text/template">
                     ## HTML Tags Review
@@ -205,8 +236,67 @@
 
 
         <section>
-            <h2>CSS: Cascading Style Sheets</h2>
+            <section>
+                <h2>CSS: Cascading Style Sheets</h2>
+            </section>
+            <section>
+                <h3>3 different ways to style!</h3>
+                <ul>
+                    <li>Inline Style</li>
+                    <li>Internal Stylesheet</li>
+                    <li>External Stylesheet</li>
+                </ul>
+                <p class="fragment">Today's focus is on External Stylesheets</p>
+            </section>
 
+            <section>
+                <h2>External Stylesheets</h2>
+                <p>Link Tag to add external stylesheet</p>
+                <pre><code data-trim contenteditable>
+                    <link href="/styles/main.css" rel="stylesheet">
+                </code></pre>
+                <br/>
+                <div class="fragment">
+                    <p>Link Attributes</p>
+                    <ul>
+                        <li>href: the location of the file
+                            <ul>
+                                <li>Absolute Path <strong style="color: red">c:/Documents/styles/main.css</strong></li>
+                                <li>Relative Path <strong style="color: red">/style/main.css</strong></li>
+                            </ul>
+                        </li>
+                        <li>rel: the type of file it is (in our case - stylesheet)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Journey into main.css</h2>
+                <h3>Tag Selectors</h3>
+                <pre><code data-trim contenteditable>
+TagName {
+    target: attribute;
+}
+                </code></pre>
+                <div class="fragment">
+                    <p>Examples</p>
+                    <pre><code data-trim contenteditable>
+h2 {
+    color: red;
+}
+
+p{
+    font-size: 50px;
+}
+                    </code></pre>
+                    <small>Note: don't worry about remembering these, you can search them up anytime</small>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h2>Lab</h2>
+            <p>Chocolate Chip Cookie Recipe</p>
         </section>
 
         <section>
