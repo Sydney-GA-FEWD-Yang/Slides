@@ -6,8 +6,7 @@
   "subdomain": "",
   "main": "app.js",
   "scripts": {
-    "test": "node -e \"require('grunt').tasks(['test']);\"",
-    "start": "node -e \"require('grunt').tasks(['serve']);\""
+    "start": "node app.js"
   },
   "author": {
     "name": "Yang Li",
