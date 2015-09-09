@@ -20,3 +20,8 @@ for (var slide in config.slides){
 app.listen(port);
 
 console.log('server started on ' + port);
+
+module.exports = {
+    port: port,
+    rebuild: createPage.rebuild
+}
