@@ -1,0 +1,23 @@
+{
+  "slides": {
+    "/": {
+      "file": "/index.html",
+      "active": true,
+      "includes": false
+    },
+    "/lab00": {
+      "file": "/slides/lab00/index.html",
+      "active": true,
+      "includes": true
+    },
+    "/lab01": {
+      "file": "/slides/lab01/index.html",
+      "active": true,
+      "includes": true
+    }
+  },
+  "includes": {
+    "header": "header.html",
+    "footer": "footer.html"
+  }
+}
