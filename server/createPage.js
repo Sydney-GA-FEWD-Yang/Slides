@@ -36,10 +36,21 @@ module.exports = function(config){
         });
     };
 
+    var buildSlide = function (slide, config, cb){
+        (function (slide, config){
+            fs.readFile(process.cwd() + config.file, function(err, data){
+                var dataBuffer = config.includes ? Buffer.concat([header, data, footer]) : data;
+                cache[slide] = dataBuffer.toString();
+                if (cb) cb();
+            })
+        })(slide, config);
+    };
+
     buildCache();
 
     return {
         serve: serve,
-        rebuild: buildCache
+        rebuild: buildCache,
+        buildSlide: buildSlide
     }
 };

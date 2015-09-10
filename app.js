@@ -23,5 +23,5 @@ console.log('server started on ' + port);
 
 module.exports = {
     port: port,
-    rebuild: createPage.rebuild
+    createPage: createPage
 }
