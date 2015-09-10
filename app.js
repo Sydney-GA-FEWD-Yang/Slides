@@ -3,7 +3,7 @@ var app = express();
 var config = require('./config');
 var createPage = require('./server/createPage')(config);
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 function createRoute(slide){
     app.get(slide, function(req, res){
