@@ -3,6 +3,8 @@ var app = express();
 var config = require('./config');
 var createPage = require('./server/createPage')(config);
 
+var herokuPing = require('heroku-ping-alive');
+
 var port = process.env.PORT || 3000;
 
 function createRoute(slide){

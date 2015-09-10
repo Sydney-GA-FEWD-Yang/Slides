@@ -6,7 +6,7 @@
   "subdomain": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./node_modules/forever/bin/forever app.js",
     "dev": "node start.js"
   },
   "author": {
@@ -22,7 +22,9 @@
     "node": "~0.12.0"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "forever": "^0.15.1",
+    "heroku-ping-alive": "0.0.0-beta.1"
   },
   "devDependencies": {
     "browser-sync": "^2.9.3",
