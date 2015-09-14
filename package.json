@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "browser-sync": "^2.9.3",
-    "gulp-watch": "^4.3.5",
-    "watch": "^0.16.0"
+    "gulp-watch": "^4.3.5"
   }
 }

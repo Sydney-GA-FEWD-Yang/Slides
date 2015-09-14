@@ -7,7 +7,9 @@ browserSync.init({
     proxy: ('http://127.0.0.1:' + app.port),
     port: 8000,
     logConnections: true,
-    logFileChanges: true
+    logFileChanges: true,
+    ghostMode: false,
+    ui: false
 });
 
 var restart = function(){

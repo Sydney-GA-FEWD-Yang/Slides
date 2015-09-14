@@ -8,12 +8,44 @@
     "/lab00": {
       "file": "/slides/lab00/index.html",
       "active": true,
-      "includes": true
+      "includes": true,
+      "labNum": 0
     },
     "/lab01": {
       "file": "/slides/lab01/index.html",
       "active": true,
-      "includes": true
+      "includes": true,
+      "labNum": 1
+    },
+    "/lab02": {
+      "file": "/slides/lab02/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 1
+    },
+    "/lab03": {
+      "file": "/slides/lab03/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 1
+    },
+    "/lab04": {
+      "file": "/slides/lab04/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 1
+    },
+    "/lab05": {
+      "file": "/slides/lab05/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 1
+    },
+    "/lab06": {
+      "file": "/slides/lab06/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 1
     }
   },
   "includes": {
