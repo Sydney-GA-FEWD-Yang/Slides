@@ -1,51 +1,59 @@
 {
   "slides": {
-    "/": {
-      "file": "/index.html",
+    "/cheatsheet": {
+      "file": "/slides/cheatsheet/index.html",
       "active": true,
-      "includes": false
+      "includes": true,
+      "name": "Cheatsheet"
     },
     "/lab00": {
       "file": "/slides/lab00/index.html",
       "active": true,
       "includes": true,
-      "labNum": 0
+      "labNum": 0,
+      "name": "Lab 00 - Github and version control"
     },
     "/lab01": {
       "file": "/slides/lab01/index.html",
       "active": true,
       "includes": true,
-      "labNum": 1
+      "labNum": 1,
+      "name": "Lab 01 - HTML Basics"
     },
     "/lab02": {
       "file": "/slides/lab02/index.html",
       "active": true,
       "includes": true,
-      "labNum": 1
+      "labNum": 2,
+      "name": "Lab 02 - CSS Basics"
     },
     "/lab03": {
       "file": "/slides/lab03/index.html",
-      "active": true,
+      "active": false,
       "includes": true,
-      "labNum": 1
+      "labNum": 3,
+      "name": "Lab 03 - Github and version control"
     },
     "/lab04": {
       "file": "/slides/lab04/index.html",
-      "active": true,
+      "active": false,
       "includes": true,
-      "labNum": 1
+      "labNum": 4,
+      "name": "Lab 04 - Github and version control"
     },
     "/lab05": {
       "file": "/slides/lab05/index.html",
-      "active": true,
+      "active": false,
       "includes": true,
-      "labNum": 1
+      "labNum": 5,
+      "name": "Lab 05 - Github and version control"
     },
     "/lab06": {
       "file": "/slides/lab06/index.html",
-      "active": true,
+      "active": false,
       "includes": true,
-      "labNum": 1
+      "labNum": 6,
+      "name": "Lab 06 - Github and version control"
     }
   },
   "includes": {

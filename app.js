@@ -16,7 +16,11 @@ function createRoute(slide, active, labNum){
     });
 }
 
+app.get('/', require('./server/getIndex'));
+
 app.use('/static', express.static(process.cwd() + '/static'));
+
+app.use('/exercises', express.static(process.cwd() + '/exercises'));
 
 for (var slide in config.slides){
 	createRoute(slide, config.slides[slide].active, config.slides[slide].labNum);
