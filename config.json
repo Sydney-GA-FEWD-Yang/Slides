@@ -1,7 +1,7 @@
 {
   "slides": {
     "/questions": {
-      "file": "/slides/anonymousQuestions/index.html",
+      "file": "/slides/AnonymousQuestions/index.html",
       "active": true,
       "includes": false,
       "name": "Anonymous Questions"
