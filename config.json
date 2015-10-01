@@ -35,7 +35,7 @@
     },
     "/lab03": {
       "file": "/slides/lab03/index.html",
-      "active": false,
+      "active": true,
       "includes": true,
       "labNum": 3,
       "name": "Lab 03 - Github and version control"
