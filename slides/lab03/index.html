@@ -107,7 +107,118 @@
         </code></pre>
     </section>
     <section>
-        <h2>Question?</h2>
+        <h2>Questions?</h2>
         <p class="fragment">Where does background colour exist?</p>
+        <img class="fragment" src="/static/images/lab03/box-model-background.jpg"/>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>DOM Tree</h2>
+        <p>DOM - document object model</p>
+        <p>It's the same as the html elements in our page</p>
+        <p>HTML is a tree data structure</p>
+    </section>
+    <section>
+        <p>Draw this dom tree</p>
+        <pre><code data-trim contenteditable>
+            &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Work&lt;/title&gt;
+        &lt;meta charset="utf-8"/&gt;
+        &lt;meta name="author" content="Yang Li"/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My Work&lt;/h1&gt;
+        &lt;p&gt;This is my &lt;a&gt;work&lt;/a&gt;&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;IBM&lt;/li&gt;
+            &lt;li&gt;Nextgen.net&lt;/li&gt;
+            &lt;li&gt;Bauer Media&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    </section>
+    <section>
+        <img src="/static/images/lab03/dom_tree.jpg">
+        <p>Terminology</p>
+        <ul>
+            <li>li is a child of ul</li>
+            <li>body is the parent p</li>
+            <li>body is a sibling of head</li>
+            <li>li is a descendant of body</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>CSS Selectors</h2>
+        <p>Review - We've learnt how to select tags</p>
+        <pre><code data-trim contenteditable>
+            div {
+    color: blue;
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>More specific?</h2>
+        <p>We can select more specific tags as such</p>
+        <pre><code data-trim contenteditable>
+            body > div {
+    color: red;
+}
+        </code></pre>
+        <p> the greater than symbol (&gt;) means child</p>
+        <p> In our case, we are selecting all divs that are childrens of body</p>
+    </section>
+    <section>
+        <pre><code data-trim contenteditable>
+            div {
+    color: blue;
+}
+
+body > div {
+    color: red;
+}
+        </code></pre>
+        <pre><code data-trim contenteditable>
+            &lt;body&gt;
+    &lt;div&gt;Hello world&lt;/div&gt;
+    &lt;div&gt;
+        &lt;div&gt;Which colour will I be?&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+        </code></pre>
+    </section>
+    <section>
+        <h2>Selecting descendants</h2>
+        <pre><code data-trim contenteditable>
+            body div {
+    color: red;
+}
+        </code></pre>
+        <p>The rule above will colour all divs that are descendants of body <span style="color: red">RED</span></p>
+    </section>
+    <section>
+        <pre><code data-trim contenteditable>
+div {
+    color: blue;
+}
+
+body div {
+    color: red;
+}
+        </code></pre>
+        <pre><code data-trim contenteditable>
+&lt;body&gt;
+    &lt;div&gt;Hello world&lt;/div&gt;
+    &lt;div&gt;
+        &lt;div&gt;Which colour will I be?&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+        </code></pre>
     </section>
 </section>
