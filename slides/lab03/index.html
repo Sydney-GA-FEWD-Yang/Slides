@@ -12,6 +12,8 @@
         <li>Last Week Review</li>
         <li>Pull Request on Github</li>
         <li>CSS Box Model</li>
+        <li>DOM tree & Tag Selectors</li>
+        <li>Classes and Ids</li>
     </ul>
 </section>
 
@@ -220,5 +222,64 @@ body div {
     &lt;/div&gt;
 &lt;/body&gt;
         </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Classes and Ids</h2>
+        <p>More CSS selectors</p>
+    </section>
+    <section>
+        <h2>.Classes</h2>
+        <pre><code data-trim contenteditable>
+            &lt;div class="my-class"&gt;
+    content
+&lt;div&gt;
+        </code></pre>
+        <p>To style this in css</p>
+        <pre><code data-trim contenteditable>
+            .my-class{
+    color: red;
+}
+        </code></pre>
+        <p>Notice the "." infront of ".my-class"</p>
+    </section>
+    <section>
+        <h2>#Ids</h2>
+        <pre><code data-trim contenteditable>
+            &lt;div id="my-id"&gt;
+    content
+&lt;div&gt;
+        </code></pre>
+        <p>To style this in css</p>
+        <pre><code data-trim contenteditable>
+            #my-class{
+    color: red;
+}
+        </code></pre>
+        <p>Notice the "#" infront of "#my-class"</p>
+    </section>
+    <section>
+        <h2>Classes vs Ids</h2>
+        <table>
+            <tr>
+                <th>Classes</th>
+                <th>Ids</th>
+            </tr>
+            <tr>
+                <td>Use classes to style an element or group of element</td>
+                <td>Use Ids to target unique and individual elements</td>
+            </tr>
+            <tr>
+                <td>Use classes when in doubt</td>
+                <td>Use Id's when you want a linkable section</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <p>You can use ids to create section links</p>
+        <p>Example : https://en.wikipedia.org/wiki/HTML#HTTP</p>
+        <p>This links to the #HTTP section of wikiedpia's HTML page</p>
     </section>
 </section>
