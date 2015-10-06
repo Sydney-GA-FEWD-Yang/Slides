@@ -14,3 +14,88 @@
         <li>Practical</li>
     </ul>
 </section>
+
+<section>
+    <section>
+        <h2>Classes and Ids</h2>
+        <p>Review - In HTML</p>
+        <pre><code data-trim contenteditable>
+            <div id="my-id">This div contains an id</div>
+<div class="my-class">This div contains a class</div>
+        </code></pre>
+        <p>In CSS</p>
+        <pre><code data-trim contenteditable>
+            #my-id{
+    style: value;
+}
+
+.my-class{
+    style: value;
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>More specificity</h2>
+        <p>Contrived Example:</p>
+        <pre><code data-trim contenteditable>
+            <div class="red-background-div">
+    Lets select this element
+</div>
+        </code></pre>
+        <p>In stylesheet.css</p>
+        <pre><code data-trim contenteditable>
+            .red-background-div{
+    color: red;
+}
+        </code></pre>
+        <p>Is this good enough?</p>
+    </section>
+    <section>
+        <p>We can select all divs containing a certain class</p>
+        <pre><code data-trim contenteditable>
+            div.red-background-div{
+    color: red;
+}
+        </code></pre>
+        <p>Note how there is no space between div and .red-background-div - this is intentional</p>
+        <p>Question: Order here is important, why?</p>
+        <pre class="fragment"><code data-trim contenteditable>
+            //switch position
+.red-background-divdiv{
+    color: red;
+}
+        </code></pre>
+        <p class="fragment">This will think you are selecting an element with the "red-background-divdiv" class</p>
+    </section>
+    <section>
+        <h2>Multiple classes</h2>
+        <p>On the same element</p>
+        <pre><code data-trim contenteditable>
+            <div class="image-holder red-background-div">
+    Lets select this element
+</div>
+        </code></pre>
+        <p>Question: Notice this element has two classes, what are they?</p>
+        <p class="fragment">image-holder and red-background-div</p>
+        <p class="fragment">How do we select this?</p>
+    </section>
+    <section>
+        <pre><code data-trim contenteditable>
+            .image-holder.red-background-div{
+    color: red;
+    border: 1px solid black;
+}
+        </code></pre>
+        <p>Question: Note order is not important here, why?</p>
+        <p class="fragment" style="color: #398439;">No, Order is only important when you have a tag selector</p>
+        <hr/>
+        <p class="fragment">Question: What happens if I put a space between the two classes in CSS?</p>
+        <p class="fragment" style="color: #398439;">It becomes a ancestor/descendant selector</p>
+        <hr/>
+        <p class="fragment">Question: Can we have multiple ids?</p>
+        <p class="fragment" style="color: #398439;">Answer: No</p>
+    </section>
+    <section>
+        <p>Remember, all selectors follow the ancestor/descendant selector rules</p>
+    </section>
+</section>
