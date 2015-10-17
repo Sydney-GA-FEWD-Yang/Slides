@@ -47,19 +47,19 @@
       "labNum": 4,
       "name": "Lab 04 - Layout"
     },
-    "/lab05": {
-      "file": "/slides/lab05/index.html",
-      "active": false,
+    "/lab07": {
+      "file": "/slides/lab07/index.html",
+      "active": true,
       "includes": true,
-      "labNum": 5,
-      "name": "Lab 05 - Github and version control"
+      "labNum": 7,
+      "name": "Lab 07 - Introduction to programming"
     },
-    "/lab06": {
-      "file": "/slides/lab06/index.html",
-      "active": false,
+    "/lab08": {
+      "file": "/slides/lab08/index.html",
+      "active": true,
       "includes": true,
-      "labNum": 6,
-      "name": "Lab 06 - Github and version control"
+      "labNum": 8,
+      "name": "Lab 08 - jQuery"
     }
   },
   "includes": {
