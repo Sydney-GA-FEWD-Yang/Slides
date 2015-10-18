@@ -1,15 +1,36 @@
 <section>
     <h1>FEWD</h1>
-    <h3>Lesson 4 - Intro to Programming</h3>
+    <h3>Lesson 7 - Intro to Programming</h3>
     <p>
         General Assembly
     </p>
 </section>
 
 <section>
-    <h2>Programming?</h2>
-    <p>What is it?</p>
-    <p class="fragment">A set of instructions given to a computer.  Like a recipe, given to a robot.</p>
+    <h2>Agenda</h2>
+    <ul>
+        <li>Discuss what it means to be a programmer</li>
+        <li>Write pseudo code</li>
+        <li>Intro to Javascript(JS)</li>
+        <li>Lab</li>
+    </ul>
+</section>
+
+<section>
+    <section>
+        <h2>Becoming a Programmer</h2>
+        <p>Being a programmer isn't about knowing programming languages, it's about how you think.</p>
+        <p>Programmers solve problems, computers are their tool.</p>
+    </section>
+    <section>
+        <h2>Do computers think?</h2>
+        <p>What do you think</p>
+    </section>
+    <section>
+        <h2>Programming?</h2>
+        <p>What is it?</p>
+        <p class="fragment">A set of instructions given to a computer.  Like a recipe, given to a robot.</p>
+    </section>
 </section>
 
 <section>
@@ -25,7 +46,7 @@
         <ul>
             <li>A device to control temperature</li>
             <li>When temperature is too low, it turns on the heater</li>
-            <li>When temperature is too high, it turns on the air conditioner</li>
+            <li>When temperature is too high, it turns off the heater</li>
         </ul>
     </section>
     <section>
@@ -36,19 +57,68 @@
         </code></pre>
     </section>
     <section>
-        <pre data-trim contenteditable class="fragment"><code>
-target_temperature = 72
+        <pre data-trim contenteditable><code>target_temperature = 72
     repeat forever,
         current_temperature = get_sensor_reading
         if target_temperature > (current_temperature+5),
             turn_on_heater
         if target_temperature <= current_temperature,
-            turn_off_heater
-        </code></pre>
+            turn_off_heater</code></pre>
         <p class="fragment">Note the indentation</p>
     </section>
     <section>
         <h2>Your Turn: Rock Paper Scissors</h2>
         <p>Program a rock paper scissors game</p>
     </section>
+</section>
+
+<section>
+    <section>
+        <h2>Javascript!</h2>
+        <p>The language that is used in browsers</p>
+        <p>Follows a specific syntax</p>
+        <pre><code data-trim contenteditable>var TARGET_TEMPERATURE = 72;
+while (true) {
+    var currentTemperature = getSensorReading();
+    if (TARGET_TEMPERATURE > (currentTemperature + 5)) {
+        turnOnHeader();
+    } else if (TARGET_TEMPERATURE <= (currentTemperature + 5)) {
+        turnOffHeader();
+    }
+}</code></pre>
+    </section>
+    <section>
+        <h2>!Important</h2>
+        <p>Don't worry about syntax, google has your back.</p>
+        <p>It's all about problem solving!</p>
+    </section>
+    <section>
+        <h2>Point?</h2>
+        <p>Whats the point of javascript?</p>
+        <ul>
+            <li class="fragment">To give a web page behavior</li>
+            <li class="fragment">To process data and talk to a server</li>
+            <li class="fragment">Can be used to build servers</li>
+        </ul>
+        <p class="fragment">Explore some websites and discuss which parts might be javascript</p>
+    </section>
+    <section>
+        <h2>Examine some code</h2>
+        <p>Go to <a href="https://github.com/ga-students/FEWD-Sydney-20/tree/master/Week_04_Intro_Programming/07_intro_programming/solutions/color_scheme_switcher" target="_blank">Color Scheme Switcher</a></p>
+        <p>Open the page up.</p>
+    </section>
+    <section>
+        <h2>Script tag</h2>
+        <p>Notice the script tag in the html page. We use this to add the javascript files.</p>
+        <pre><code data-trim contenteditable>
+            <script src="./file.js"></script>
+        </code></pre>
+        <p>Note: script is <b>NOT</b> a self closing tag</p>
+    </section>
+</section>
+
+<section>
+    <h2>Lab Time</h2>
+    <p>Go to <a href="http://codepen.io/nevan/pen/shtLA" target="_blank">http://codepen.io/nevan/pen/shtLA</a></p>
+    <p>Change the codes to complete the traffic lights</p>
 </section>
