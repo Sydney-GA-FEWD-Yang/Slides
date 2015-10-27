@@ -60,6 +60,13 @@
       "includes": true,
       "labNum": 8,
       "name": "Lab 08 - jQuery"
+    },
+    "/lab10": {
+      "file": "/slides/lab10/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 8,
+      "name": "Lab 10 - Computer Science"
     }
   },
   "includes": {

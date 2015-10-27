@@ -1,0 +1,303 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 10 - Computer Science</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>Agenda</h2>
+    <ul>
+        <li>jQuery Review</li>
+        <li>Variables and datatypes</li>
+        <li>Maths with Javascript</li>
+        <li>Harder datatypes</li>
+        <li>Conditionals</li>
+        <li>Lab - Tax Calculator</li>
+    </ul>
+</section>
+
+<section>
+    <section>
+        <h2>jQuery Review</h2>
+            To add a click listener to an element
+        <pre><code data-trim>
+$('selector').click(function(){
+    //Do something in here
+})
+        </code></pre>
+            To do something with an element
+        <pre><code data-trim>
+$('selector').hide();
+
+//or
+
+$('selector').slideToggle();
+        </code></pre>
+    </section>
+    <section>
+        <h2>Combine these</h2>
+        <pre><code data-trim>
+$('selector').click(function(){
+    $('another-selector').hide();
+})
+        </code></pre>
+        What does this code do?
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Variables</h2>
+        Variables help us maintain state within our application
+        <pre><code data-trim>
+            var nameOfVariable = 0;
+        </code></pre>
+        <p>Two things to note here</p>
+        <ul>
+            <li>Use camelCase (first letter small, every other new word starts with a capital letter)</li>
+            <li>initialize value (in this case 0) [this is optional]</li>
+        </ul>
+    </section>
+    <section>
+        <h2>camelCase</h2>
+        <p>Start your variables with a lower case letter or _ (underscore)</p>
+        <ul>
+            <li>evenOdd</li>
+            <li>playerName</li>
+            <li>articleTitle</li>
+        </ul>
+        <p>Becareful not to name your variables after keywords</p>
+        <pre><code data-trim>
+            var var = 'hello'; //Wrong!
+var if = 'cool'; //Wrong!
+        </code></pre>
+        <p>Why? What happens if we don't follow this rule?</p>
+    </section>
+    <section>
+        <h2>Datatypes</h2>
+        <ul>
+            <li>Numbers</li>
+            <li>Strings</li>
+            <li>Boolean</li>
+            <li>undefined/nulls</li>
+        </ul>
+        <pre><code>
+            var numbers = 50;
+            var strings = 'a word';
+            var booleans = true;
+            var undefineds;
+            var nulls = null;
+        </code></pre>
+    </section>
+    <section>
+        <h2>Test!</h2>
+        <pre><code data-trim>
+            var test1 = 'meme';
+var test2 = 5837;
+var test3 = 'true';
+var test4 = 3.235;
+var test5 = '32';
+        </code></pre>
+    </section>
+    <section>
+        <h2>Test!</h2>
+        <pre><code data-trim>
+            var test1 = 'meme'; //String
+var test2 = 5837;  //Number
+var test3 = 'true'; //String not Boolean (careful)
+var test4 = 3.235;  //Number
+var test5 = '32';  /String not Number (careful)
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Maths</h2>
+        <pre><code data-trim>
+            var num1 = 1 + 5; //What is num1?
+var num2 = 0 * 70; //What is num2
+var num3 = 5 - 7; //What is num3?
+var num4 = 5 / 20; //What is num4?
+        </code></pre>
+    </section>
+    <section>
+        <h2>BODMAS</h2>
+        <p>Brackets, Order(powers and roots), Division, Multiplication, Addition, Subtraction</p>
+        <pre><code data-trim>
+            var test1 = 1 + 5 * 7; //What is test1?
+var test2 = 5 * 7 + 1; //what is test2?
+var test3 = (5 + 1) * 6; //What is test3?
+var test4 = 1 - 10 / 5; //What is test4?
+        </code></pre>
+    </section>
+    <section>
+        <h2>Increment</h2>
+        <p>How can we increment in Javascript?</p>
+        <pre><code>
+            var num1 = 5;
+num1 = num1 + 7;
+var num2 = 8;
+num2 = num2 + 9;
+var num3 = -5;
+num2 = num3 + num2;
+//What is num2?
+5 + 7 = num3;
+//What is num3?
+        </code></pre>
+        <p class="fragment">Tricked Ya!</p>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Harder data-types</h2>
+        <ul>
+            <li>Arrays</li>
+            <li>Objects</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Arrays</h2>
+        <p>Arrays represents comma delimited data</p>
+        <p>For example a list of groceries</p>
+        <pre><code data-trim>
+            var emptyArray = [];
+var filledArray = ['apple', 'oranges', 'pork'];
+var fibonacciArray = [1, 1, 2, 3, 5, 8, 13];
+        </code></pre>
+    </section>
+    <section>
+        <h2>Arrays - Selecting Items</h2>
+        <pre><code data-trim>
+            var names = ['yang', 'jack', 'joey', 'miranda'];
+            var secondName = names[1];
+            var firstName = names[0];
+            var thirdName = names(3); //Wrong!
+        </code></pre>
+        <p>Remember Arrays start from 0, so to select the 54th item, we use 53.</p>
+    </section>
+    <section>
+        <h2>Arrays - Methods</h2>
+        <p>You can search for the full list online, but heres a few.</p>
+        <pre><code data-trim>
+            var fruits = ['apple', 'banana', 'mango'];
+            fruits.push('blueberry'); //adds a fruit to the end;
+            fruits.pop(); //Removes the last fruit
+            console.log(fruits.length); //prints out how many fruits there are
+            console.log(fruits); //What will this print
+        </code></pre>
+    </section>
+    <section>
+        <h2>Objects</h2>
+        <p>Used to store key-value pairs</p>
+        <pre><code data-trim>
+            var obj = {
+    name: 'Yang Li',
+    occupation: 'Developer',
+    location: 'Sydney'
+}
+        </code></pre>
+        <p>Objects help you store a table of data</p>
+    </section>
+    <section>
+        <h2>Objects extended</h2>
+        <p>You can mix and match objects and arrays and any other data type</p>
+        <pre><code data-trim>
+var customer = {
+    gender: 'male',
+    paid: false,
+    order: [
+        {
+            name: 'steak',
+            detail: 'medium rare with mash',
+            served: false,
+            price: 15.99
+        },
+        {
+            name: 'Chicken Burger',
+            detail: 'No Onions',
+            served: true,
+            price: 12.50
+        }
+    ],
+    tips: 0
+}
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Conditionals</h2>
+        <ul>
+            <li>if</li>
+            <li>else</li>
+            <li>else if</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Hurrah when happy</h2>
+        <pre><code data-trim>
+            var mood = 'happy';
+
+if (mood === 'happy') {
+    alert('Hurrah');
+}
+        </code></pre>
+        <pre><code data-trim>
+            var mood = 'sad';
+
+if (mood === 'happy') {
+    alert('Hurrah');
+}
+        </code></pre>
+        <p>Triple === is used for comparison</p>
+    </section>
+    <section>
+        <h2>Did I pass?</h2>
+        <pre><code data-trim>
+            var mark = 82;
+if (mark >= 80) {
+    alert('passed');
+} else {
+    alert('did not pass');
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>Child, Adult, Pensioner?</h2>
+        <pre><code data-trim>
+            var age = 15;
+
+            if (age < 18) {
+                alert('Child');
+            } else if (age < 65) {
+                alert('Adult');
+            } else {
+                alert('Pensioner');
+            }
+        </code></pre>
+
+        <pre class="fragment"><code data-trim>
+            //is this the same
+            var age = 15;
+
+            if (age < 65) {
+                alert('Adult');
+            } else if (age < 18) {
+                alert('Child');
+            } else {
+                alert('Pensioner');
+            }
+        </code></pre>
+    </section>
+    <section>
+        <h2>Is this the same?</h2>
+
+    </section>
+</section>
+
+
