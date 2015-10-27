@@ -1,11 +1,5 @@
 {
   "slides": {
-    "/questions": {
-      "file": "/slides/AnonymousQuestions/index.html",
-      "active": true,
-      "includes": false,
-      "name": "Anonymous Questions"
-    },
     "/cheatsheet": {
       "file": "/slides/cheatsheet/index.html",
       "active": false,

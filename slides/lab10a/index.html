@@ -1,0 +1,77 @@
+<section>
+    <section>
+        <h2>Harder data-types</h2>
+        <ul>
+            <li>Arrays</li>
+            <li>Objects</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Arrays</h2>
+        <p>Arrays represents comma delimited data</p>
+        <p>For example a list of groceries</p>
+        <pre><code data-trim>
+var emptyArray = [];
+var filledArray = ['apple', 'oranges', 'pork'];
+var fibonacciArray = [1, 1, 2, 3, 5, 8, 13];
+        </code></pre>
+    </section>
+    <section>
+        <h2>Arrays - Selecting Items</h2>
+        <pre><code data-trim>
+var names = ['yang', 'jack', 'joey', 'miranda'];
+var secondName = names[1];
+var firstName = names[0];
+var thirdName = names(3); //Wrong!
+        </code></pre>
+        <p>Remember Arrays start from 0, so to select the 54th item, we use 53.</p>
+    </section>
+    <section>
+        <h2>Arrays - Methods</h2>
+        <p>You can search for the full list online, but heres a few.</p>
+        <pre><code data-trim>
+var fruits = ['apple', 'banana', 'mango'];
+fruits.push('blueberry'); //adds a fruit to the end;
+fruits.pop(); //Removes the last fruit
+console.log(fruits.length); //prints out how many fruits there are
+console.log(fruits); //What will this print
+        </code></pre>
+    </section>
+    <section>
+        <h2>Objects</h2>
+        <p>Used to store key-value pairs</p>
+        <pre><code data-trim>
+var obj = {
+    name: 'Yang Li',
+    occupation: 'Developer',
+    location: 'Sydney'
+}
+        </code></pre>
+        <p>Objects help you store a table of data</p>
+    </section>
+    <section>
+        <h2>Objects extended</h2>
+        <p>You can mix and match objects and arrays and any other data type</p>
+        <pre><code data-trim>
+var customer = {
+    gender: 'male',
+    paid: false,
+    order: [
+        {
+            name: 'steak',
+            detail: 'medium rare with mash',
+            served: false,
+            price: 15.99
+        },
+        {
+            name: 'Chicken Burger',
+            detail: 'No Onions',
+            served: true,
+            price: 12.50
+        }
+    ],
+    tips: 0
+}
+        </code></pre>
+    </section>
+</section>

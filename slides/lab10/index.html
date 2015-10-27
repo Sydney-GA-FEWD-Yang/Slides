@@ -12,7 +12,6 @@
         <li>jQuery Review</li>
         <li>Variables and datatypes</li>
         <li>Maths with Javascript</li>
-        <li>Harder datatypes</li>
         <li>Conditionals</li>
         <li>Lab - Tax Calculator</li>
     </ul>
@@ -45,6 +44,11 @@ $('selector').click(function(){
         </code></pre>
         What does this code do?
     </section>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <p>Blackout - <a href="https://github.com/ga-students/FEWD-Sydney-20/tree/master/Week_05_JS_ComputerScience/09_variables_conditionals/starter_code/blackout" target="_blank">here</a></p>
 </section>
 
 <section>
@@ -83,16 +87,17 @@ var if = 'cool'; //Wrong!
             <li>Boolean</li>
             <li>undefined/nulls</li>
         </ul>
-        <pre><code>
-            var numbers = 50;
-            var strings = 'a word';
-            var booleans = true;
-            var undefineds;
-            var nulls = null;
+        <pre><code data-trim>
+var numbers = 50;
+var strings = 'a word';
+var booleans = true;
+var undefineds;
+var nulls = null;
         </code></pre>
     </section>
     <section>
         <h2>Test!</h2>
+        <p>Name these datatypes</p>
         <pre><code data-trim>
             var test1 = 'meme';
 var test2 = 5837;
@@ -136,7 +141,7 @@ var test4 = 1 - 10 / 5; //What is test4?
     <section>
         <h2>Increment</h2>
         <p>How can we increment in Javascript?</p>
-        <pre><code>
+        <pre><code data-trim>
             var num1 = 5;
 num1 = num1 + 7;
 var num2 = 8;
@@ -152,81 +157,8 @@ num2 = num3 + num2;
 </section>
 
 <section>
-    <section>
-        <h2>Harder data-types</h2>
-        <ul>
-            <li>Arrays</li>
-            <li>Objects</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Arrays</h2>
-        <p>Arrays represents comma delimited data</p>
-        <p>For example a list of groceries</p>
-        <pre><code data-trim>
-            var emptyArray = [];
-var filledArray = ['apple', 'oranges', 'pork'];
-var fibonacciArray = [1, 1, 2, 3, 5, 8, 13];
-        </code></pre>
-    </section>
-    <section>
-        <h2>Arrays - Selecting Items</h2>
-        <pre><code data-trim>
-            var names = ['yang', 'jack', 'joey', 'miranda'];
-            var secondName = names[1];
-            var firstName = names[0];
-            var thirdName = names(3); //Wrong!
-        </code></pre>
-        <p>Remember Arrays start from 0, so to select the 54th item, we use 53.</p>
-    </section>
-    <section>
-        <h2>Arrays - Methods</h2>
-        <p>You can search for the full list online, but heres a few.</p>
-        <pre><code data-trim>
-            var fruits = ['apple', 'banana', 'mango'];
-            fruits.push('blueberry'); //adds a fruit to the end;
-            fruits.pop(); //Removes the last fruit
-            console.log(fruits.length); //prints out how many fruits there are
-            console.log(fruits); //What will this print
-        </code></pre>
-    </section>
-    <section>
-        <h2>Objects</h2>
-        <p>Used to store key-value pairs</p>
-        <pre><code data-trim>
-            var obj = {
-    name: 'Yang Li',
-    occupation: 'Developer',
-    location: 'Sydney'
-}
-        </code></pre>
-        <p>Objects help you store a table of data</p>
-    </section>
-    <section>
-        <h2>Objects extended</h2>
-        <p>You can mix and match objects and arrays and any other data type</p>
-        <pre><code data-trim>
-var customer = {
-    gender: 'male',
-    paid: false,
-    order: [
-        {
-            name: 'steak',
-            detail: 'medium rare with mash',
-            served: false,
-            price: 15.99
-        },
-        {
-            name: 'Chicken Burger',
-            detail: 'No Onions',
-            served: true,
-            price: 12.50
-        }
-    ],
-    tips: 0
-}
-        </code></pre>
-    </section>
+    <h2>Exercise</h2>
+    <p>Score Keeper <a href="https://github.com/ga-students/FEWD-Sydney-20/tree/master/Week_05_JS_ComputerScience/09_variables_conditionals/starter_code/score_keeper" target="_blank">Here</a></p>
 </section>
 
 <section>
@@ -236,6 +168,7 @@ var customer = {
             <li>if</li>
             <li>else</li>
             <li>else if</li>
+            <li>And, Or</li>
         </ul>
     </section>
     <section>
@@ -270,34 +203,75 @@ if (mark >= 80) {
     <section>
         <h2>Child, Adult, Pensioner?</h2>
         <pre><code data-trim>
-            var age = 15;
+var age = 15;
 
-            if (age < 18) {
-                alert('Child');
-            } else if (age < 65) {
-                alert('Adult');
-            } else {
-                alert('Pensioner');
-            }
+if (age < 18) {
+    alert('Child');
+} else if (age < 65) {
+    alert('Adult');
+} else {
+    alert('Pensioner');
+}
         </code></pre>
 
         <pre class="fragment"><code data-trim>
-            //is this the same
-            var age = 15;
+//is this the same as above?
+var age = 15;
 
-            if (age < 65) {
-                alert('Adult');
-            } else if (age < 18) {
-                alert('Child');
-            } else {
-                alert('Pensioner');
-            }
+if (age < 65) {
+    alert('Adult');
+} else if (age < 18) {
+    alert('Child');
+} else {
+    alert('Pensioner');
+}
         </code></pre>
     </section>
     <section>
-        <h2>Is this the same?</h2>
+        <h2>And, Or</h2>
+        <p>You can combine conditions</p>
+        <ul>
+            <li>E.g, determine if person needs to work</li>
+            <li>Age between 18 and 65</li>
+            <li>Use the and && operator</li>
+        </ul>
+        <pre><code data-trim>
+var age = 17
 
+if (age > 18 && age < 65) {
+    alert('needs to work');
+} else {
+    alert('go play');
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>Determine if fruit</h2>
+        <ul>
+            <li>If you get an apple or orange then it's a fruit</li>
+            <li>Everything else is not a fruit</li>
+            <li>Use the or || operator</li>
+        </ul>
+        <pre><code data-trim>
+            var fruit = 'cabbage';
+
+if (fruit === 'apple' || fruit === 'orange') {
+    alert('fruit!');
+}
+        </code></pre>
     </section>
 </section>
 
+<section>
+    <h2>Exercise</h2>
+    <p>Compare numbers - <a href="https://github.com/ga-students/FEWD-Sydney-20/tree/master/Week_05_JS_ComputerScience/09_variables_conditionals/starter_code/compare_that" target="_blank">Here</a></p>
+</section>
 
+<section>
+    <h2>Lab</h2>
+    <p>In pairs</p>
+    <p><b>Build a tax calculator</b></p>
+    <p>Tax rates are <a href="https://www.ato.gov.au/Rates/Individual-income-tax-rates/" target="_blank">here</a></p>
+    <p>Only include the tax table (don't add medicare levy, temporary budget repair levy or anything apart from the table)</p>
+    <p>Open ended UI</p>
+</section>
