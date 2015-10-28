@@ -61,6 +61,13 @@
       "includes": true,
       "labNum": 8,
       "name": "Lab 10 - Computer Science"
+    },
+    "/lab10a": {
+      "file": "/slides/lab10a/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 8,
+      "name": "Lab 10a - Harder Concepts"
     }
   },
   "includes": {

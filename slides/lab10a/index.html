@@ -75,3 +75,55 @@ var customer = {
         </code></pre>
     </section>
 </section>
+
+<section>
+    <section>
+        <h2>Loops</h2>
+        <p>Sometimes you may have repetitive code, which you can use a loop to shorten</p>
+        <p>We'll be looking at for loops</p>
+        <p>Used mainly on Arrays</p>
+    </section>
+    <section>
+        <h3>Consider the below code</h3>
+        <pre><code data-trim>
+            alert('a');
+            alert('b');
+            alert('c');
+            alert('d');
+            alert('e');
+            alert('f');
+            alert('g');
+            alert('h');
+            alert('i');
+            alert('j');
+            alert('k');
+        </code></pre>
+    </section>
+    <section>
+        <h2>For loop</h2>
+        <pre><code data-trim>
+for (variable name and start value; condition to break loop; incrementer) {
+    body of loop
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>Using For loops</h2>
+        <pre><code data-trim>
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ,'j', 'k'];
+for (var i = 0; i < letters.length; i++) {
+    alert(letters[i]);
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>Bug!</h2>
+        <pre><code data-trim>
+for (var i = 0; i < 10; i--) {
+    console.log(i);
+}
+        </code></pre>
+        <p>Whats wrong with this loop?</p>
+        <p class="fragment">It's an infinite loop</p>
+    </section>
+</section>
