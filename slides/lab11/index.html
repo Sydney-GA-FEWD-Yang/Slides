@@ -1,0 +1,72 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 11 - Functions</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>Agenda</h2>
+    <ul>
+        <li>Showcase - Tax Calculator</li>
+        <li>Review</li>
+        <li>Functions</li>
+        <li>jQuery Again</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Showcase - Tax Calculator</h2>
+    <p>Come up and showcase your tax calculator program!</p>
+</section>
+
+<section>
+    <section>
+        <h2>Review</h2>
+        <ul>
+            <li>Variables</li>
+            <li>Conditionals</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Programming task</h2>
+        <p>Enter a mark and determine if it's a </p>
+        <ul>
+            <li>HD - Mark >= 85</li>
+            <li>DN - Mark >= 75</li>
+            <li>CR - Mark >= 65</li>
+            <li>PS - Mark >= 50</li>
+            <li>FL - Mark < 50</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Variables</h2>
+        <p>First get the mark from the user and assign it to a variable</p>
+        <pre><code data-trim>
+            var mark = $('#mark').val();
+        </code></pre>
+        <p class="fragment">Now the conditionals</p>
+    </section>
+    <section>
+        <pre><code data-trim>
+            var result; //Unassigned at this point
+            if (mark < 50) {
+                result = 'FL';
+            } else if (mark < 65) {
+                result = 'PS';
+            } else if (mark < 75) {
+                result = 'CR';
+            } else if (mark < 85) {
+                result = 'DN';
+            } else {
+                result = 'HD';
+            }
+            $('#result') = result; //Print result to screen
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>Functions!</h2>
+</section>
