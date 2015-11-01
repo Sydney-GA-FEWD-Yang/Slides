@@ -50,23 +50,121 @@
     </section>
     <section>
         <pre><code data-trim>
-            var result; //Unassigned at this point
-            if (mark < 50) {
-                result = 'FL';
-            } else if (mark < 65) {
-                result = 'PS';
-            } else if (mark < 75) {
-                result = 'CR';
-            } else if (mark < 85) {
-                result = 'DN';
-            } else {
-                result = 'HD';
-            }
-            $('#result') = result; //Print result to screen
+var result; //Unassigned at this point
+
+if (mark < 50) {
+    result = 'FL';
+} else if (mark < 65) {
+    result = 'PS';
+} else if (mark < 75) {
+    result = 'CR';
+} else if (mark < 85) {
+    result = 'DN';
+} else {
+    result = 'HD';
+}
+
+$('#result') = result; //Print result to screen
         </code></pre>
     </section>
 </section>
 
 <section>
-    <h2>Functions!</h2>
+    <section>
+        <h2>Functions!</h2>
+        <ul>
+            <li>To run code in jQuery</li>
+            <li>Blackbox, hides logic</li>
+            <li>Purpose: Grouping code together</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Syntax</h2>
+        <pre><code data-trim>
+function nameOfFunction(){
+    //Body of function, commands in function
+}
+        </code></pre>
+        <p>Easy!</p>
+    </section>
+    <section>
+        <h2>Usage</h2>
+        <pre><code data-trim>
+            nameOfFunction(); //This will call the function
+        </code></pre>
+    </section>
+    <section>
+        <h2>WHY?!?!?!?</h2>
+        <p>Why functions...</p>
+        <p>Pass a group of commands in jQuery</p>
+        <pre><code data-trim>
+$('#tile-1-1').click(function(){
+    //Write your commands here
+})
+        </code></pre>
+    </section>
+    <section>
+        <h2>More Functions</h2>
+        <p>Functions as blackboxes</p>
+        <pre><code data-trim>
+function nameOfFunction(InputVariable1, InputVariable2 ...){
+    //do some calculation
+    return returnVariable;
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>WHY?!?!?!?!</h2>
+        <p>Reason 2: Grouping code/Creating formula</p>
+        <p>Calculate BMI = height/(weight^2)</p>
+        <pre><code data-trim>
+            //BMI Index
+function calculateBMI(height, weight){
+    var heightToMeters = height / 100;
+    var heightSquared = height * height;
+    var BMI = weight / heightSquared;
+    return BMI;
+}
+        </code></pre>
+    </section>
+    <section>
+        <h2>Using it as black box</h2>
+        <pre><code data-trim>
+var myHeightCM = 175;
+var myWeightKG = 70;
+var BMI = calculateBMI(myHeightCM, myWeightKG);
+        </code></pre>
+        <p>In this case, we don't care how BMI is calculated, we just trust the calculateBMI function.</p>
+    </section>
+    <section>
+        <h2>In Essence</h2>
+        <p>Functions just wrap around our codes and gives it a name</p>
+    </section>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <p>Try this <a href="https://github.com/ga-students/FEWD-Sydney-20/blob/master/Week_05_JS_ComputerScience/10_functions/starter_code/cash_register/index.html" target="_blank">Code</a></p>
+</section>
+
+<section>
+    <h2>Exercise - Weather Application</h2>
+    <p>Groups of 2</p>
+    <ul>
+        <li>Convert Farenheight to Celsius</li>
+        <li>Change the background color based on temperature
+            <ul>
+                <li>Less than 0 - Cold Blue</li>
+                <li>0 - 10 - Chill Blue</li>
+                <li>10 - 20 - Mild Yellow</li>
+                <li>20 - 30 - Moderate Orange</li>
+                <li>30 - 40 - Orange</li>
+                <li>More than 40 - Red!</li>
+            </ul>
+        </li>
+        <li>
+            (Bonus) - Radio button/Drop down list to switch input from Farenheight to Celsius
+        </li>
+    </ul>
+
 </section>
