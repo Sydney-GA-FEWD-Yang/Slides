@@ -75,6 +75,13 @@
       "includes": true,
       "labNum": 11,
       "name": "Lab 11 - Functions"
+    },
+    "/lab13": {
+      "file": "/slides/lab13/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 13,
+      "name": "Lab 13 - Responsive"
     }
   },
   "includes": {

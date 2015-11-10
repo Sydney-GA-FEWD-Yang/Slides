@@ -1,0 +1,135 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 11 - Functions</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>Agenda</h2>
+    <ul>
+        <li>Response Design</li>
+        <li>EM Sizes</li>
+        <li>Media Queries</li>
+        <li>Startup match maker</li>
+    </ul>
+</section>
+
+<section>
+    <section>
+        <h2>Responsive Design</h2>
+        <p>What is responsive design?</p>
+        <p class="fragment">Lets go through some examples on the web</p>
+    </section>
+    <section>
+        <h2>Are these sites responsive?</h2>
+        <p>facebook</p>
+        <p>Twitter</p>
+        <p>Youtube</p>
+        <p>Instagram</p>
+        <p>Google</p>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>EM size</h2>
+    <pre><code data-trim>
+p {
+    font-size: 1em;
+}
+    </code></pre>
+        <ul>
+            <li>em sizes are relative to the parent font-size</li>
+            <li>Usually used for font sizes</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Default</h2>
+        <p>The default size of a page is 16px</p>
+        <p>We can change this default using</p>
+        <pre><code data-trim>
+body {
+    font-size: 16px;
+}
+        </code></pre>
+        <p>In this case</p>
+        <ul>
+            <li>1em = 16px</li>
+            <li>2em = 32px</li>
+            <li>1.5em = ?px</li>
+        </ul>
+    </section>
+    <section>
+        <h2>The case for ems</h2>
+        <p>Why ems?</p>
+        <p>Ems let us change one font-size and all the font-sizes on the screen will change</p>
+    </section>
+    <section>
+        <h3>Useful for Responsive designs?</h3>
+        <p>Yes!</p>
+        <p>We can easily control the font-size of the page through one change</p>
+    </section>
+    <section>
+        <h2>In real life</h2>
+        <p>It's not used as much as it should be in real life.</p>
+        <p>Why? Here are some reasons</p>
+        <ul>
+            <li>People are used to px</li>
+            <li>Ems isn't absolute and hence isn't easy to reason about</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Media Queries</h2>
+        <p>Media queries allows us to give different css to an element based on some properties</p>
+        <p>Properties may include</p>
+        <ul>
+            <li>Whether the screen is a print screen</li>
+            <li>The width of your browser window</li>
+            <li>Heres a <a href="https://en.wikipedia.org/wiki/Media_queries" target="_blank">list</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Syntax</h2>
+        <pre><code data-trim>
+@media screen and (min-width:600px) {
+    color: blue;
+}
+@media screen and (max-width:599px) {
+    color: red;
+}
+        </code></pre>
+        <p>This media query is only an example...</p>
+    </section>
+    <section>
+        <h2>Real life uses</h2>
+        <pre><code data-trim>
+@media screen and (min-width:600px) {
+    .hide-for-mobile{
+        display: block;
+    }
+}
+@media screen and (max-width:599px) {
+    .hide-for-mobile{
+        display: none;
+    }
+}
+        </code></pre>
+        <p>Now the hide-for-mobile class will hide content when screen is less than 599px</p>
+    </section>
+    <section>
+        <h2>Breakpoints</h2>
+        <p>Here are some <a href="https://scotch.io/quick-tips/default-sizes-for-twitter-bootstraps-media-queries" target="_blank">breakpoints</a></p>
+    </section>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <p>We'll be working on making our startup match maker responsive</p>
+    <p><a href="https://github.com/ga-students/FEWD-Sydney-20/tree/master/Week_07_Multiple_Screens/14_lab_responsive/starter_code" target="_blank">Instructions</a></p>
+    <p><a href="https://github.com/ga-students/FEWD-Sydney-20/blob/master/Week_07_Multiple_Screens/14_lab_responsive/solution/mb_starter_up_match_maker.png" target="_blank">End result</a></p>
+</section>
