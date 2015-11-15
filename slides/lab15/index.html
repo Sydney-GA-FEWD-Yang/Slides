@@ -1,0 +1,214 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 15 - Forms!</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>Agenda</h2>
+    <ul>
+        <li>Simple Login</li>
+        <li>More form items</li>
+        <li>Ajax with jQuery</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Forms</h2>
+    <p>An important part of web development is forms. Without forms, you can't collect data from users.</p>
+</section>
+
+<section>
+    <section>
+        <h2>Simple Login</h2>
+    <pre><code data-trim>
+<form id="login">
+    <input type="text" placeholder="username" id="username"/>
+    <input type="password" placeholder="password" id="password">
+    <button>Submit</button>
+</form>
+    </code></pre>
+        <p>Lets look at each individual attribute</p>
+    </section>
+    <section>
+        <h2>Collecting the data</h2>
+        <pre><code data-trim>
+$('#login').submit(function(event){
+    event.preventDefault();
+    //Your code
+})
+        </code></pre>
+
+    </section>
+    <section>
+        <h2>Example</h2>
+        <pre><code data-trim>
+$('#login').submit(function(event){
+    event.preventDefault();
+    var username = $('#username').val();
+    var password = $('#password').val();
+    if (username === 'yang' && password === 'qwerty'){
+        alert('logged in!');
+    } else {
+        alert('wrong login');
+    }
+})
+        </code></pre>
+    </section>
+    <section>
+        <h2>preventDefault</h2>
+        <ul>
+            <li>Why do we need event.preventDefault?</li>
+            <li class="fragment">Default behaviour of a form submit is to refresh the page</li>
+            <li class="fragment">Today's websites are dynamic</li>
+            <li class="fragment">Modern websites aims to change the content without refreshing</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>More forms</h2>
+        <ul>
+            <li>Numbers</li>
+            <li>Drop downs</li>
+            <li>Textareas</li>
+            <li>Radio buttons</li>
+            <li>Checkboxes</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Numbers</h2>
+        <pre><code data-trim>
+            <input type="number"/>
+        </code></pre>
+        <p>Whats the difference?</p>
+        <p class="fragment">On mobile devices, it will bring up the numbers keyboard</p>
+    </section>
+    <section>
+        <h2>Drop downs</h2>
+        <pre><code data-trim>
+<select>
+    <option selected>Select State</option>
+    <option>NSW</option>
+    <option>VIC</option>
+    <option>QLD</option>
+    <option>SA</option>
+    <option>WA</option>
+    <option>NT</option>
+    <option>TAS</option>
+</select>
+        </code></pre>
+        <p>The selected attribute is the default</p>
+    </section>
+    <section>
+        <h2>Textareas</h2>
+        <pre><code data-trim>
+            <textarea></textarea>
+        </code></pre>
+        <p>Different to input boxes.</p>
+        <p>Used for multiple paragraph texts, like comments and chat.</p>
+    </section>
+    <section>
+        <h2>Radio Buttons</h2>
+        <pre><code data-trim>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+        </code></pre>
+        <p>Select one out of the group</p>
+        <p>Group is determined by the name property</p>
+    </section>
+    <section>
+        <h2>CheckBoxes</h2>
+        <pre><code data-trim>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike
+<input type="checkbox" name="vehicle" value="Car">I have a car
+        </code></pre>
+        <p>Similar to radio buttons, but you can select more than 1</p>
+    </section>
+</section>
+
+<section>
+    <h2>Forms with Bootstrap</h2>
+    <p><a href="http://getbootstrap.com/css/#buttons" target="_blank">For Buttons</a></p>
+    <pre><code data-trim>
+        <button class="btn btn-default" type="submit">Button</button>
+    </code></pre>
+    <p><a href="http://getbootstrap.com/css/#forms" target="_blank">For input fields</a></p>
+    <pre><code data-trim>
+<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Name">
+    </div>
+</form>
+    </code></pre>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <p>Build the form <a href="https://github.com/ga-students/FEWD-Sydney-20/blob/master/Week_08_forms_and_things/15_form_basics/optional_content/starter_code/application_form/Screenshots/Screen%20Shot%202013-07-15%20at%2010.24.32%20PM.png" target="_blank">here</a></p>
+</section>
+
+<section>
+    <section>
+        <h2>Ajax!</h2>
+        <p>Ajax revolutionized web development</p>
+    </section>
+    <section>
+        <h2>Before ajax</h2>
+        <p>Traditional websites would refresh to load new data</p>
+        <p>For example - <a href="http://www.w3schools.com/" target="_blank">http://www.w3schools.com/</a> </p>
+    </section>
+    <section>
+        <h2>What is ajax?</h2>
+        <p>Asynchronous Javascript and XML</p>
+        <p>XML is also old - replaced with JSON</p>
+        <p>JSON - Javascript Object Notation</p>
+        <p>Ajax allows us to get data without refreshing</p>
+    </section>
+    <section>
+        <h2>Ajax with jQuery</h2>
+        <p>There are two main types of AJAX request</p>
+        <ul>
+            <li>GET</li>
+            <li>POST</li>
+        </ul>
+        <p>There are others, but you can get away with just these two.</p>
+        <p>These requests are part of what's called Restful services</p>
+    </section>
+    <section>
+        <h2>GET Request</h2>
+        <p>Used to get data from a server</p>
+        <pre><code data-trim>
+$.get('http://url.com', function(data, status){
+    //Do what you need
+});
+        </code></pre>
+        <p>data is normally in Object notation</p>
+    </section>
+    <section>
+        <h2>POST Request</h2>
+        <p>Used to send the server data</p>
+        <pre><code data-trim>
+$.post('http://url.com', data, function(data, status){
+    //do what you need
+})
+        </code></pre>
+        <p>Note here data is the data you send to the server</p>
+        <p>Data is in Object notation</p>
+    </section>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <p>Build a stock price checker</p>
+    <ul>
+        <li>User can input a stock name</li>
+        <li>Your app will find the stock price and print it to the user</li>
+        <li>Use this url https://fewdstockprice.herokuapp.com/finance/STOCKNAME</li>
+        <li>E.G https://fewdstockprice.herokuapp.com/finance/BHP</li>
+    </ul>
+</section>

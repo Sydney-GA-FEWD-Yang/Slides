@@ -82,6 +82,13 @@
       "includes": true,
       "labNum": 13,
       "name": "Lab 13 - Responsive"
+    },
+    "/lab15": {
+      "file": "/slides/lab15/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 15,
+      "name": "Lab 13 - Forms and Things"
     }
   },
   "includes": {
