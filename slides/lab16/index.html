@@ -1,0 +1,75 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 16 - More Forms!</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>More Forms</h2>
+    <ul>
+        <li>Object Structure</li>
+        <li>jQuery POST</li>
+        <li>Sign up and login</li>
+    </ul>
+</section>
+
+<section>
+    <section>
+        <h2>Object Structure</h2>
+        <p>Revisit how a simple object works</p>
+        <pre><code data-trim>
+var myDetails = {
+    name: 'Yang Li',
+    email: 'yangli1990@live.com.au'
+}
+        </code></pre>
+        <p>Key Value Pairs</p>
+        <p>Don't forget the comma and curly braces</p>
+    </section>
+    <section>
+        <h2>How to Access Objects</h2>
+        <p>There are two ways</p>
+        <pre><code data-trim>myDetails.name</code></pre>
+        <pre><code data-trim>myDetails['name']</code></pre>
+        <p>The second way is more dynamic and works for everything</p>
+    </section>
+    <section>
+        <h2>Lets try</h2>
+        <pre><code data-trim>
+var user = {
+    username: 'jones',
+    firstname: 'Jack',
+    surname: 'Jones',
+    phoneNumber: '012345678'
+}
+
+console.log(user.firstname);
+console.log(user['phoneNumber']);
+
+user.firstname = 'Amanda';
+
+var a = 'firstname';
+
+console.log(user[a]);
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>jQuery POST</h2>
+    <p>Use to send data to a server</p>
+    <pre><code data-trim>
+        var data = {
+    username: 'yang',
+    password: 'qwerty'
+}
+
+$.post('http://url.com/login', data, function(data, status){
+    if (data === 'success'){
+        //Show user information
+    }
+})
+    </code></pre>
+</section>
