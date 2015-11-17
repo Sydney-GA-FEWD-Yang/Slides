@@ -9,10 +9,26 @@
 <section>
     <h2>More Forms</h2>
     <ul>
+        <li>Array Review</li>
         <li>Object Structure</li>
         <li>jQuery POST</li>
         <li>Sign up and login</li>
     </ul>
+</section>
+
+<section>
+    <section>
+        <h2>Array Review</h2>
+        <pre><code data-trim>
+var thisIsAnArray = ['mike', 'harvey', 'donna'];
+var secondItemInArray = thisIsAnArray[1]; //Not thisIsAnArray[2]
+
+//Loop through Array
+for (var i = 0; i < thisIsAnArray.length; i++){
+    console.log(thisIsAnArray[i]);
+}
+        </code></pre>
+    </section>
 </section>
 
 <section>
@@ -55,21 +71,126 @@ var a = 'firstname';
 console.log(user[a]);
         </code></pre>
     </section>
+    <section>
+        <h2>common mistakes</h2>
+        <pre><code data-trim>
+//Don't do
+var obj = {
+    firstname = 'Yang'
+    surname = 'Li'
+}
+//Do
+var obj = {
+    firstname: 'Yang',
+    surname: 'Li'
+}
+        </code></pre>
+        <p class="fragment">Within objects assign with colon (:)</p>
+        <p class="fragment">Objects properties are separated by a comma</p>
+    </section>
+    <section>
+        <h2>Object Notation</h2>
+        <p>Objects may take on a different notation than variables</p>
+        <pre><code data-trim>
+var obj = {
+    name: 'yang',
+    'date of birth': '29/2/1950'
+}
+        </code></pre>
+        <p class="fragment">Notice 'date of birth' doesn't conform with common variables (dateOfBirth).</p>
+        <p class="fragment">You can do this in objects, just make the key a string</p>
+    </section>
+    <section>
+        <h2>Selecting object notation</h2>
+        <p>to select 'date of birth'</p>
+        <pre><code data-trim>
+//Don't do
+var dob = obj.date of birth
+
+//Do
+var dob = obj['date of birth']
+        </code></pre>
+    </section>
 </section>
 
 <section>
-    <h2>jQuery POST</h2>
-    <p>Use to send data to a server</p>
-    <pre><code data-trim>
-        var data = {
+    <section>
+        <h2>jQuery POST</h2>
+        <p>Use to send data to a server</p>
+        <pre><code data-trim>
+var data = {
     username: 'yang',
     password: 'qwerty'
 }
 
-$.post('http://url.com/login', data, function(data, status){
-    if (data === 'success'){
-        //Show user information
-    }
+$.post('http://url.com/data', data, function(data, status){
+    //Usually this is a success login
+}).fail(function(){
+    //Usually a failed login
 })
-    </code></pre>
+        </code></pre>
+    </section>
+    <section>
+        <h2>Ajax fail</h2>
+        <ul>
+            <li>Failures can occur in GET POST or any other restful API</li>
+            <li class="fragment">Failures can be one of many reasons here are some</li>
+            <li class="fragment">server returns status code 404 - Cannot find url</li>
+            <li class="fragment">Server returns 500, you broke the server</li>
+            <li class="fragment">Server returns 400, bad request</li>
+            <li class="fragment">Server returns 503, server unavailable</li>
+            <li class="fragment">Anything >= 400 is a server failure</li>
+            <li class="fragment">Heres a more complete <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">list</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Handling Failures</h2>
+        <pre><code data-trim>
+$.post('http://url.com/login', data, function(data, status){
+    $('#login-section').hide();
+    $('#user-section').show();
+}).fail(function(){
+    $('#error').show();
+})
+        </code></pre>
+    </section>
+    <section>
+        <h2>Example</h2>
+        <pre><code data-trim>
+$.post('https://fewd20.herokuapp.com/', {data: {name: 'yang', 'reason': 'improve in front end'}}, function(data, status){
+    $('#success').show();
+}).fail(function(data){
+    $('#error').hide();
+})
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>Exercise 1</h2>
+    <ul style="font-size: 30px;">
+        <li>Create a register page with a username, password and email field (add any other fields you wish)</li>
+        <li>Use the url https://fewd20.herokuapp.com/register</li>
+        <li>When the user has filled out the form, show the login page</li>
+        <li>If the server responds with an error, inform the user</li>
+        <li>Create the login page</li>
+        <li>User can login with their password and username</li>
+        <li>use the url https://fewd20.herokuapp.com/login</li>
+        <li>When the user is successful, take the user to the logged in page</li>
+        <li>Create the logged in page that displays the user's username, email and any other fields</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Exercise 2</h2>
+    <p>Don't do the homework for this week, please do this in class and submit it as homework</p>
+    <ul style="font-size: 30px;">
+        <li>Create a chatroom</li>
+        <li>Use the url https://fewd20.herokuapp.com/chat</li>
+        <li>Your chatroom has a username field and a message field</li>
+        <li>When the user has a username and message they can send and it will post it to the server</li>
+        <li>You can get the same url to get a list of all the chats</li>
+        <li>Console log the chat's data structure and see how you can post it on page</li>
+        <li>Bonus - use a setInterval to continuously get new messages from the server</li>
+    </ul>
 </section>
