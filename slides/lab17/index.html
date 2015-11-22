@@ -1,0 +1,94 @@
+<section>
+    <h1>FEWD</h1>
+    <h3>Lesson 17 - Bootstrap!</h3>
+    <p>
+        General Assembly
+    </p>
+</section>
+
+<section>
+    <h2>Bootstrap</h2>
+    <ul>
+        <li>Bootstrap!</li>
+        <li>Bootstrap!</li>
+        <li>Bootstrap!</li>
+    </ul>
+</section>
+
+<section>
+    <section>
+        <h2>Bootstrap!</h2>
+        <p>Used to help make our websites responsive</p>
+        <p>Bootstrap website at <a href="http://getbootstrap.com/" target="">getbootstrap.com</a></p>
+    </section>
+    <section>
+        <h2>Getting started</h2>
+        <pre><code data-trim>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        </code></pre>
+        <ul>
+            <li>Bootstrap CSS - for items in <a href="http://getbootstrap.com/css/" target="_blank">http://getbootstrap.com/css/</a></li>
+            <li>jQuery - Needed by bootstrap js</li>
+            <li>Bootstrap js - for items in <a href="http://getbootstrap.com/javascript/" target="_blank">http://getbootstrap.com/javascript/</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Containers</h2>
+        <p>There are two types of containers for your websites</p>
+        <pre><code data-trim>
+<div class="container">
+    //This type of container leaves a padding for medium and big sized screens
+</div>
+        </code></pre>
+        <pre><code data-trim>
+<div class="container-fluid">
+    //This type of container has no padding
+</div>
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Grid system!</h2>
+        <ul>
+            <li>Most responsive libraries will have a grid system</li>
+            <li>If you don't use any of the responsive widgets, grid is still very useful</li>
+            <li>Grid helps us escape the need for a table</li>
+        </ul>
+    </section>
+    <section>
+        <h2>12 columns</h2>
+        <ul>
+            <li>Grid generally works by using a 12 column system</li>
+            <li>Most content use the same sized columns</li>
+            <li>To get 3 columns, you will need to use 4 grid columns for each column</li>
+            <li>To get 2 columns, you will need to use 6 grid columns for each column</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Example</h2>
+        <pre><code data-trim>
+<div class="row">
+    <div class="col-md-6">Content</div>
+    <div class="col-md-6">Content</div>
+</div>
+        </code></pre>
+        <ul>
+            <li>Notice the row class, this is for one row of columns</li>
+            <li>Notice it's col-md-6, col stands for column, md stands for medium and 6 stands for 6 standard columns</li>
+            <li>In this case, we wanted 2 columns since 2x6 = 12</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Sizes</h2>
+        <ul>
+            <li>col-xs-6, md stands for medium - which means it will break grid at extra small size</li>
+            <li>col-sm-6, md stands for medium - which means it will break grid at small size</li>
+            <li>col-md-6, md stands for medium - which means it will break grid at medium device size</li>
+            <li>col-lg-6, md stands for medium - which means it will break grid at large size</li>
+        </ul>
+    </section>
+</section>

@@ -96,6 +96,13 @@
       "includes": true,
       "labNum": 16,
       "name": "Lab 16 - More Forms"
+    },
+    "/lab17": {
+      "file": "/slides/lab17/index.html",
+      "active": true,
+      "includes": true,
+      "labNum": 17,
+      "name": "Lab 17 - Bootstrap"
     }
   },
   "includes": {
